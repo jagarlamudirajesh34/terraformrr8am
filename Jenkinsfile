@@ -9,7 +9,9 @@ pipeline {
    stages{
       stage('git pull'){
          steps{
-             git 'https://github.com/jagarlamudirajesh34/terraformrr8am.git'
+            sh 'git --version'
+            sh 'whereis git'
+            git 'https://github.com/jagarlamudirajesh34/terraformrr8am.git'
           }
       }
       stage('terraform check'){
