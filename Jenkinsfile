@@ -1,5 +1,11 @@
 pipeline {
    agent any
+   tools {
+      git 'Default'
+      jdk 'jdk1.8'
+      maven 'maven3'
+   }
+   
    stages{
       stage('git pull'){
          steps{
